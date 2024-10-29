@@ -9,14 +9,14 @@
 <body>
     <div id="app">
         <div class="container mt-5">
-            <p style="display: flex; justify-content: center;" v-text="respuesta"></p>
+            <p :class="{'text-primary': respuesta > 100,'text-danger': respuesta < 0,'text-warning': respuesta > 400}" style="display: flex; justify-content: center;" v-text="respuesta"></p>
             <input v-model="numero1" type="number" placeholder="numero 1" class="form-control" aria-label="Text input with checkbox">
             <input v-model="numero2" type="number" placeholder="numero 2" class="form-control mt-2" aria-label="Text input with checkbox">
             <div class="submit mt-2" style="display: flex; justify-content: center;">
-                <button type="button" class="btn btn-primary" v-text="nameButton1" @click="sumar()" style="margin-right: 5px;"></button>
-                <button type="button" class="btn btn-primary" v-text="nameButton2" @click="restar()" style="margin-right: 5px;"></button>
-                <button type="button" class="btn btn-primary" v-text="nameButton3" @click="multiplicar()" style="margin-right: 5px;"></button>
-                <button type="button" class="btn btn-primary" v-text="nameButton4" @click="dividir()" style="margin-right: 5px;"></button>
+                <button type="button" class="btn btn-warning" v-text="nameButton1" @click="sumar()" style="margin-right: 5px;"></button>
+                <button type="button" class="btn btn-warning" v-text="nameButton2" @click="restar()" style="margin-right: 5px;"></button>
+                <button type="button" class="btn btn-warning" v-text="nameButton3" @click="multiplicar()" style="margin-right: 5px;"></button>
+                <button type="button" class="btn btn-warning" v-text="nameButton4" @click="dividir()" style="margin-right: 5px;"></button>
             </div>
         </div>
       </div>
