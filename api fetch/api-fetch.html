@@ -25,8 +25,7 @@
                     </tr>
                     
                 </thead>
-                <tbody v-for="item in dataUser" style="text-align: center;" v-for="fila = fila + 1">
-                    <td>{{fila}}</td>
+                <tbody v-for="item in dataUser" style="text-align: center;" id="filaCompleta">
                     <td>
                         <img :src="item.picture.medium" alt='Imagen' style="border-radius: 5px;">
                     </td>
@@ -43,13 +42,13 @@
                     <td v-text="item.location.state"></td>
                     <td v-text="item.email"></td>
                     <td>
-                    <button class="btn btn-danger" @click="removeUser">Eliminar</button>
+                    <button class="btn btn-danger" @click="removeBtn">Eliminar</button>
                     </td>
                 </tbody>
             </table>
-            <button class="btn btn-dark" @click="getUser" >Generate Random User</button>
+            <button class="btn btn-dark" @click="getUser">Generate Random User</button>
         </div>
-        
+        <button @click="addNumberBtn">Hola</button>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
